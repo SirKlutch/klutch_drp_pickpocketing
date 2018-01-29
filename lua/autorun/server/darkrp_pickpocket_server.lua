@@ -7,7 +7,12 @@ DRPPickPocketConfig = DRPPickPocketConfig or {
 	PickDist = 1, -- the pickpocket swep has a range of this many meters
 	AlertTime = 10, -- on average how many seconds it takes for a picked person to realize he's been had
 	PickCoolDown = 30, -- this many seconds must pass before can pick again
+	WorkshopDownload == true -- setting to false will disable workshop download if you want prefer to use FastDL.
 }
+
+if WorkshopDownload == true then
+	resource.AddWorkshop("1285245130")	
+end
 
 
 resource.AddFile("sound/snd_jack_job_pickpocket1.wav")
