@@ -273,7 +273,7 @@ function SWEP:TransferCash(vic)
 end
 
 function SWEP:IsCop(ply)
-	return table.HasValue(DRPPickPocketConfig.CopJobs, ply:getDarkRPVar("job"))
+	return DRPPickPocketConfig.UseDarkRPCPStatus and ply:isCP() or table.HasValue(DRPPickPocketConfig.CopJobs, ply:getDarkRPVar("job"))
 end
 
 function SWEP:Reload()
