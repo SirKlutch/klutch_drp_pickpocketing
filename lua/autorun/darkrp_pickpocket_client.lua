@@ -7,7 +7,7 @@ if (CLIENT) then
 		if (ply:Alive()) then
 			local Wep = ply:GetActiveWeapon()
 
-			if ((Wep) and (Wep:GetClass() == "weapon_pickpocket") and (Wep:GetPickin())) then
+			if (IsValid(Wep) and (Wep:GetClass() == "weapon_pickpocket") and (Wep:GetPickin())) then
 				Set = true
 				ply.DRPPickPocketPoseSet = true
 				ply:SetPoseParameter("aim_pitch", 81)
