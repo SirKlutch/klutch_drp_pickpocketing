@@ -1,8 +1,9 @@
-DRPPickPocketConfig = DRPPickPocketConfig or {
+DRPPickPocketConfig = {
 	PickSpeed = 1, -- multiplier for how quickly pockets get picked
 	MinCash = .05, -- minimum fraction of a player's wallet that you may get
 	MaxCash = .10, -- maximum fraction of a player's wallet that you may get
-	CopJobs = {"Civil Protection", "Civil Protection Chief", "Mayor"}, -- anyone with any of these job names will be immune to pickpocketing and will be chat-alerted if they witness a failed pickpocket attempt
+	UseDarkRPCPStatus = true, -- use darkrp's CP table (GAMEMODE.CivilProtection from jobs file) instead of CopsJobs table
+	CopJobs = {"Civil Protection", "Civil Protection Chief", "Mayor"}, -- (UseDarkRPCPStatus MUST BE false) anyone with any of these job names will be immune to pickpocketing and will be chat-alerted if they witness a failed pickpocket attempt
 	WitnessDist = 20, -- any cops within this many meters (and who have a clear LoS and who are looking in the right direction) will be alerted if they see a failed pickpocket attempt
 	PickDist = 1, -- the pickpocket swep has a range of this many meters
 	AlertTime = 10, -- on average how many seconds it takes for a picked person to realize he's been had
