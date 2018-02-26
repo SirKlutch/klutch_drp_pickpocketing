@@ -11,10 +11,6 @@ DRPPickPocketConfig = {
 	WorkshopDownload == true -- setting to false will disable workshop download if you prefer to use FastDL.
 }
 
-if WorkshopDownload == true then
-	resource.AddWorkshop("1285245130")	
-end
-
 
 resource.AddFile("sound/snd_jack_job_pickpocket1.wav")
 resource.AddFile("sound/snd_jack_job_pickpocket2.wav")
@@ -24,6 +20,10 @@ resource.AddFile("sound/snd_jack_job_smallkching.wav")
 resource.AddFile("sound/snd_jack_job_smallkching.wav")
 resource.AddFile("materials/mat_jack_job_dollar1.vmt")
 resource.AddFile("materials/mat_jack_job_dollar2.vmt")
+
+if WorkshopDownload == true then
+	resource.AddWorkshop("1285245130")	
+end
 
 function DRPPickPocket_WhomILookinAt(self)
 	local ply = self.Owner
